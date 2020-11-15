@@ -1,0 +1,9 @@
+<nav class="main-nav" data-navtabs>
+    <ul class="navlist">
+        {% for region in regions %}
+            <li class="navlist__item">
+                <a href="javascript:;" data-target="{{ region.id }}">{{ region.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

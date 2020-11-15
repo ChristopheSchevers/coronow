@@ -1,0 +1,18 @@
+/* LAYOUT */
+
+.container {
+    max-width: $main-width;
+    margin: 0 auto;
+    padding: 0 $padding;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}

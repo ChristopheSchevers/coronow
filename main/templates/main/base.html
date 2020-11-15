@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+{% load static %}
+{% load sass_tags %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" type="text/css" href="{% sass_src 'css/styles.scss' %}" />
+
+    <title>Coronow</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="wrapper">
+            {% include "main/header.html" %}
+            {% block content %}{% endblock  %}
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

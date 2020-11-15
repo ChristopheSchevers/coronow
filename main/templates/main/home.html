@@ -1,0 +1,9 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    {% include "main/nav.html" %}
+
+    {% for region in regions %}
+        {% include "main/region.html" %}
+    {% endfor %}
+{% endblock %}

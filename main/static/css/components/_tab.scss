@@ -1,0 +1,11 @@
+.tab-content {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75));
+    &.tab-content--open {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+}

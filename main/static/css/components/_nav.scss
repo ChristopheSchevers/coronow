@@ -1,0 +1,31 @@
+.main-nav {
+    a {
+        color: $base-font-color;
+        text-decoration: unset;
+    }
+    .navlist{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .navlist__item a {
+            display: block;
+            padding: 1rem 2rem;
+            position: relative;
+            @include transition(all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75));
+            &:after {
+                content: '';
+                border-bottom: 3px solid transparent;
+                position: absolute;
+                left: 0; bottom: 0; right: 0;
+                @include transition(all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75));
+            }
+            &:hover, &.active {
+                background-color: rgba(#000,.01);
+                color: $primary;
+                &:after {
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+}
