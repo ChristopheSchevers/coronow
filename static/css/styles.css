@@ -45,9 +45,41 @@ table {
 img {
   width: 100%; }
 
+* {
+  box-sizing: border-box; }
+
 .page-wrapper {
   position: relative;
   min-height: 100vh; }
+
+html, body {
+  font-family: "Open Sans", sans-serif; }
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 1rem; }
+
+h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 600; }
+
+h1, .h1 {
+  font-size: 2.6rem;
+  font-weight: 700; }
+
+h2, .h2 {
+  font-size: 2.2rem; }
+
+h3, .h3 {
+  font-size: 2rem; }
+
+h4, .h4 {
+  font-size: 1.8rem; }
+
+h5, .h5 {
+  font-size: 1.6rem; }
+
+h6, .h6 {
+  font-size: 1.4rem; }
 
 /* LAYOUT */
 .container {
@@ -63,6 +95,29 @@ img {
   flex-direction: column;
   justify-content: center;
   height: 100%; }
+
+.text-center {
+  text-align: center; }
+
+.tab-content {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  -moz-transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  -ms-transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  -o-transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+  transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75); }
+  .tab-content.tab-content--open {
+    display: block;
+    visibility: visible;
+    opacity: 1; }
+
+.header {
+  padding: 2rem 0; }
+  .header .header-logo {
+    max-width: 300px;
+    margin: 0 auto; }
 
 .main-nav a {
   color: #111;
@@ -99,24 +154,16 @@ img {
       .main-nav .navlist .navlist__item a:hover:after, .main-nav .navlist .navlist__item a.active:after {
         border-color: #990000; }
 
-.tab-content {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
-  -moz-transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
-  -ms-transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
-  -o-transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75);
-  transition: all 0.3s cubic-bezier(0.75, 0.25, 0.25, 0.75); }
-  .tab-content.tab-content--open {
-    display: block;
-    visibility: visible;
-    opacity: 1; }
+.region-wrapper {
+  padding: 3rem 0;
+  max-width: 800px;
+  margin: 0 auto; }
 
-.header {
-  padding: 2rem 0; }
-  .header .header-logo {
-    max-width: 300px;
-    margin: 0 auto; }
+.measure-item {
+  margin: 3rem 0; }
+  .measure-item .measure-item__date {
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 1rem; }
 
 /*# sourceMappingURL=styles.css.map */

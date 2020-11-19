@@ -1,12 +1,20 @@
 <div id="region_{{ region.id }}" class="container tab-content" data-tab="{{ region.id }}">
-    <h2>{{region.title}}</h2>
-    {% if region.items %}
-        {% for item in region.items  %}
-            <h3>{{ item.title }}</h3>
-            {{ item.modtime }}
-            <p>{{ item.content }}</p>
-        {% endfor %}    
-    {% else %}
-        <p>Er zijn voorlopig geen maatregelen voor deze regio bekend.</p>
-    {% endif %}
+    <div class="region-wrapper">
+        <h2 class="h1 text-center">{{region.title}}</h2>
+        {% if region.items %}
+            {% for item in region.items  %}
+                <div class="measure-item">
+                    <h3>{{ item.title }}</h3>
+                    <div class="measure-item__date">
+                        {{ item.modtime }}
+                    </div>
+                    <p>{{ item.content }}</p>
+                </div>
+            {% endfor %}    
+        {% else %}
+            <div class="measure-item">
+                <p class="text-center">Er zijn voorlopig geen maatregelen voor deze regio bekend.</p>
+            </div>
+        {% endif %}
+    </div>
 </div>

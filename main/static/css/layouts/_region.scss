@@ -1,0 +1,13 @@
+.region-wrapper {
+    padding: 3rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.measure-item {
+    margin: 3rem 0;
+    .measure-item__date {
+        font-style: italic;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+}
